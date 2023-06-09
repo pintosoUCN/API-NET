@@ -1,4 +1,4 @@
-# Proyecto Ejemplo
+# Practica Backend
 
 Este proyecto es un ejemplo de una aplicación .NET que utiliza una base de datos SQL Server y proporciona una API para administrar usuarios, libros y reservas.
 
@@ -10,11 +10,12 @@ Este proyecto es un ejemplo de una aplicación .NET que utiliza una base de dato
 ## Pasos para ejecutar el proyecto
 
 1. **Clonar el repositorio desde GitHub:**
-git clone https://github.com/tuusuario/proyecto-ejemplo.git
+git clone https://github.com/pintosoUCN/API-NET.git
 
 2. **Crear las tablas en SQL Server.** Utilizar el siguiente código SQL:
 
 -- Crear tabla Users
+
 CREATE TABLE [Users]
 (
     id INT PRIMARY KEY,
@@ -24,6 +25,7 @@ CREATE TABLE [Users]
 );
 
 -- Crear tabla Books
+
 CREATE TABLE Books
 (
     id INT PRIMARY KEY,
@@ -33,6 +35,7 @@ CREATE TABLE Books
 );
 
 -- Crear tabla Reserves
+
 CREATE TABLE Reserves
 (
     id INT PRIMARY KEY IDENTITY(1,1),
@@ -47,6 +50,7 @@ CREATE TABLE Reserves
 3. **Agregar datos a las tablas en SQL Server.** Utilizar el siguiente código SQL:
 
 -- Insertar datos en la tabla User
+
 INSERT INTO [Users] (id, code, name, faculty)
 VALUES (1, 'U001', 'John Doe', 'Computer Science');
 
@@ -54,6 +58,7 @@ INSERT INTO [Users] (id, code, name, faculty)
 VALUES (2, 'U002', 'Jane Smith', 'Business');
 
 -- Insertar datos en la tabla Book
+
 INSERT INTO Books (id, code, book, description)
 VALUES (1, 'B001', 'Introduction to Programming', 'A beginners guide to programming');
 
@@ -61,6 +66,7 @@ INSERT INTO Books (id, code, book, description)
 VALUES (2, 'B002', 'Data Structures and Algorithms', 'A comprehensive guide to data structures and algorithms');
 
 -- Insertar datos en la tabla Reserve
+
 INSERT INTO Reserves (code, user_id, book_id, reserved_at)
 VALUES ('R001', 1, 1, '2023-06-01 10:00:00');
 
